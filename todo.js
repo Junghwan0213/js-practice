@@ -29,18 +29,21 @@ function saveToDos() {
 function paintToDo(text) {
   const li = document.createElement("li");
   //   createElement는 html의 요소를 만드는 역할을 한다.
-  const delBtn = document.createElement("<i class="fas fa-check"></i>");
+  const delBtn = document.createElement("button");
+  // delBtn.classList.add("far", "fa-times-circle");
 
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   // toDos.length는 toDos에 몇개의 요소가 있는지 알려준다.
   span.innerText = text;
-  delBtn.innerHTML = "";
+  delBtn.innerHTML = "✔";
+
   delBtn.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(delBtn);
-  li.id = newId;
+  // delBtn.appendChild(check);
   //   appendChild는 span과 delBtn을 리스트에 넣는 역할을 한다.
+  li.id = newId;
   toDoList.appendChild(li);
   const toDoObj = {
     text: text,
@@ -58,7 +61,7 @@ function handlesubmit(event) {
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
   toDoInput.value = "";
-  //   위의 명령은 엔터를 치면 입력한 값이 없어지게 한다
+  //   위의 명령은 엔터를 치면 입력창의 입력한 값이 없어지게 한다
 }
 
 function loadToDos() {
@@ -78,6 +81,7 @@ function loadToDos() {
 
 function init() {
   loadToDos();
+
   toDoForm.addEventListener("submit", handlesubmit);
 }
 

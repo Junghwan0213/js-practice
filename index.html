@@ -13,23 +13,29 @@
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   </head>
   <body>
-    <main class="main">
-      <div class="js-clock clock">
-        <h1>00:00</h1>
-      </div>
-      <div class="name">
-        <form class="js-form form">
-          <input type="text" placeholder="what is your name?" />
-        </form>
-      </div>
-
-      <div class="js-greetings greetings"></div>
-      <form class="js-toDoForm toDoForm">
-        <input type="text" placeholder="Write a To Do here" class="toDoinput" />
+    <div class="js-saying saying">
+      <h2 class="js-saying-title"></h2>
+      <span class="js-who"></span>
+    </div>
+    <div class="js-clock clock">
+      <ul class="js-clockList clockList"></ul>
+      <h1 class="js-title title"></h1>
+    </div>
+    <div class="name">
+      <form class="js-form form">
+        <input type="text" placeholder="what is your name?" />
       </form>
-      <ul class="js-toDoList toDoList"></ul>
-      <span class="js-weather weather"></span>
-    </main>
+    </div>
+
+    <h4 class="js-greetings greetings"></h4>
+    <form class="js-toDoForm toDoForm">
+      <input type="text" placeholder="Write a To Do here" class="toDoinput" />
+      <i class="fas fa-arrow-circle-right"></i>
+    </form>
+    <ul class="js-toDoList toDoList"></ul>
+    <span class="js-weather weather"></span>
+
+    <script src="saying.js"></script>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
